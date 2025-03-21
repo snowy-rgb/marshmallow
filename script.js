@@ -1,6 +1,6 @@
 // 점수와 시간 변수 설정
 let score = 0;
-let timeLeft = 30;
+let timeLeft = 40;
 
 // 점수 & 타이머 업데이트
 const scoreDisplay = document.getElementById("score");
@@ -36,7 +36,6 @@ function startGame() {
     let gameInterval = setInterval(spawnMarshmallow, 1000);
     let timerInterval = setInterval(() => {
         timeLeft--;
-        timerDisplay.innerText = `남은 시간: ${timeLeft}초`;
         if (timeLeft <= 0) {
             clearInterval(gameInterval);
             clearInterval(timerInterval);

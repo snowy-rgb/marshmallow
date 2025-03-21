@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: moveBackground 100s linear infinite; /* alternate del */
+    animation: moveBackground 10s linear infinite; /* alternate del */
     background-repeat: repeat; /* 패턴을 계속 반복 */
 }
 

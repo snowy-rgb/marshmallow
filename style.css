@@ -1,3 +1,4 @@
+/* 기본 스타일 */
 @font-face {
     font-family: 'OneStoreMobileGothicPop';
     src: url('assets/fonts/OneStoreMobileGothicPop.ttf') format('truetype');
@@ -6,23 +7,25 @@
 body {
     font-family: 'OneStoreMobileGothicPop', Arial, sans-serif;
     text-align: center;
-    background-color: #a8c7e6; /* 기본 배경색 */
+    background-color: #a8c7e6;
     background-image: 
         linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%),
         linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%);
-    background-size: 300px 300px; /* 패턴 크기 */
+    background-size: 300px 300px;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: moveBackground 10s linear infinite; /* alternate del */
-    background-repeat: repeat; /* 패턴을 계속 반복 */
+    animation: moveBackground 10s linear infinite;
+    background-repeat: repeat;
 }
 
 #game-container {
     position: relative;
-    width: 800px;
-    height: 450px;
+    width: 80%; /* 화면 크기에 따라 비율로 조정 */
+    max-width: 800px;
+    height: 56.25%; /* 16:9 비율 유지 */
+    max-height: 450px;
     background: url("assets/game_screen.png") no-repeat center center;
     background-size: cover;
     border-radius: 15px;
@@ -38,16 +41,17 @@ body {
 
 h1 {
     color: rgb(245,108,112);
-    font-size:200%;
+    font-size: 2vw; /* 반응형 글꼴 크기 */
 }
 
 #score {
     color: white;
-    font-size:400%;
+    font-size: 4vw; /* 반응형 글꼴 크기 */
     -webkit-text-stroke-width: 0.4px;
     -webkit-text-stroke-color: black;
 }
 
+/* 애니메이션 설정 */
 @keyframes moveBackground {
     0% {
         background-position: 0 0;
@@ -56,3 +60,43 @@ h1 {
         background-position: 3000px 3000px;
     }
 }
+
+/* 반응형 스타일 */
+@media (max-width: 768px) { /* 태블릿 이하 */
+    body {
+        background-size: 200px 200px; /* 패턴 크기 조정 */
+    }
+
+    #game-container {
+        width: 90%;
+        height: auto; /* 높이는 자동 조정 */
+    }
+
+    h1 {
+        font-size: 4vw; /* 더 큰 글꼴 */
+    }
+
+    #score {
+        font-size: 6vw; /* 더 큰 글꼴 */
+    }
+}
+
+@media (max-width: 480px) { /* 모바일 */
+    body {
+        background-size: 150px 150px; /* 더 작은 패턴 */
+    }
+
+    #game-container {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    #score {
+        font-size: 8vw;
+    }
+}
+

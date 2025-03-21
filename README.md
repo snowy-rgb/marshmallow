@@ -1,3 +1,7 @@
-# marshmallow
+# 트릭컬 마시멜로 게임!
 
-print("a")
+마시멜로 게임을 최대한 비슷하게 복구시켰습니다!
+영리적인 용도로 사용되지 않습니다.
+
+trickcal re:cive
+2024 EPiDGames(c)

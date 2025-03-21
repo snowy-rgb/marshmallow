@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'OneStoreMobileGothicPop';
-    src: url('/assets/fonts/OneStoreMobileGothicPop.ttf') format('truetype');
+    src: url('assets/fonts/OneStoreMobileGothicPop.ttf') format('truetype');
 }
 
 body {
-    font-family:'OneStoreMobileGothicPop', Arial, sans-serif;
+    font-family: 'OneStoreMobileGothicPop', Arial, sans-serif;
     text-align: center;
     background: url("assets/background.png") no-repeat center center;
     background-size: cover;
@@ -26,18 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: 'OneStoreMobileGothicPop', Arial, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    font-size: 32px;
-    font-weight: bold;
-    color: red;
-    margin-bottom: 10px;
-}
-
-#score, #timer {
-    font-size: 28px;
-    font-weight: bold;
-}

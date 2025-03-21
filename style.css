@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'OneStoreMobileGothicPop';
+    src: url(assets/fonts/'OneStoreMobileGothicPop.ttf') format('truetype');
+}
+
 body {
+    font-family:'OneStoreMobileGothicPop', Arial, sans-serif;
     text-align: center;
     background: url("assets/background.png") no-repeat center center;
     background-size: cover;

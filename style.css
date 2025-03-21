@@ -10,12 +10,13 @@ body {
     background-image: 
         linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%),
         linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%);
-    background-size: 200px 200px; /* 패턴 크기 */
+    background-size: 300px 300px; /* 패턴 크기 */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: moveBackground 5s linear infinite; /* alternate del */
+    animation: moveBackground 100s linear infinite; /* alternate del */
+    background-repeat: repeat; /* 패턴을 계속 반복 */
 }
 
 #game-container {
@@ -52,6 +53,6 @@ h1 {
         background-position: 0 0;
     }
     100% {
-        background-position: 300px 300px;
+        background-position: 3000px 3000px;
     }
 }

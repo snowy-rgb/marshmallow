@@ -27,7 +27,7 @@ body {
     align-items: center;
     color: white;
     font-family: 'OneStoreMobileGothicPop', Arial, sans-serif;
-    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: black;
 }
 
@@ -39,5 +39,7 @@ h1 {
 #score {
     color: white;
     font-size:400%;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black;
 }
 

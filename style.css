@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OneStoreMobileGothicPop';
-    src: url(assets/fonts/'OneStoreMobileGothicPop.ttf') format('truetype');
+    src: url('/assets/fonts/OneStoreMobileGothicPop.ttf') format('truetype');
 }
 
 body {

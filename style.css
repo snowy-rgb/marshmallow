@@ -1,31 +1,37 @@
 body {
     text-align: center;
-    background-color: #f8e8ff;
-    font-family: 'Arial', sans-serif;
+    background: url("assets/background.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #game-container {
     position: relative;
-    width: 400px;
-    height: 600px;
-    margin: auto;
-    background: url('background.png') no-repeat center center/cover;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    height: 450px;
+    background: url("assets/game_screen.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#marshmallow-area {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 10px;
 }
 
-.marshmallow {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url('marshmallow.png') no-repeat center/contain;
-    cursor: pointer;
+#score, #timer {
+    font-size: 28px;
+    font-weight: bold;
 }

@@ -100,3 +100,25 @@ h1 {
     }
 }
 
+/* 반응형 스타일 */
+@media (max-width: 1024px) { /* 큰 태블릿 이하 */
+    body {
+        background-size: 200px 200px; /* 패턴 크기 조정 */
+        animation: moveBackground 15s linear infinite; /* 속도 느리게 */
+    }
+}
+
+@media (max-width: 768px) { /* 작은 태블릿 이하 */
+    body {
+        background-size: 150px 150px; /* 패턴 크기 더 작게 */
+        animation: moveBackground 20s linear infinite; /* 속도 더 느리게 */
+    }
+}
+
+@media (max-width: 480px) { /* 모바일 */
+    body {
+        background-size: 100px 100px; /* 패턴 크기 최적화 */
+        animation: moveBackground 25s linear infinite; /* 속도 훨씬 느리게 */
+    }
+}
+

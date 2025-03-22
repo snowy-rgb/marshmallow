@@ -51,7 +51,7 @@ body {
 img {  
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 90%;
     transform: translate(-60%, -65%) scale(4.5); /* 중앙보다 살짝 왼쪽, 확대 */
     z-index: 1;
     pointer-events: none; /* 클릭 방지 */
@@ -62,4 +62,23 @@ img {
     0% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
     100% { transform: translateY(0); }
+}
+/* 반응형 스타일 */
+@media (max-width: 768px) { /* 태블릿 이하 */
+    body {
+        background-size: 200px 200px; /* 패턴 크기 조정 */
+    }
+
+    #game-container {
+        width: 90%;
+        height: auto; /* 높이는 자동 조정 */
+    }
+
+    h1 {
+        font-size: 4vw; /* 더 큰 글꼴 */
+    }
+
+    #score {
+        font-size: 6vw; /* 더 큰 글꼴 */
+    }
 }

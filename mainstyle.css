@@ -50,12 +50,12 @@ body {
 /* 1 수정됨 */
 img {  
     position: absolute;
-    top: 36%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%) scale(3.5); /* 중앙 정렬 + 확대 */
     z-index: 1;
     pointer-events: none;
-    opacity: 0.95;
+    opacity: 1;
     max-width: none;
 }
 

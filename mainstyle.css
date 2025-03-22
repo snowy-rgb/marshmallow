@@ -51,7 +51,7 @@ body {
 img {  
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 50%;
     transform: translate(-50%, -50%) scale(3.5); /* 중앙 정렬 + 확대 */
     z-index: 1;
     pointer-events: none;

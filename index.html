@@ -13,9 +13,19 @@
         <h1>훔쳐먹은 마시멜로</h1>
         <button id="start-btn">게임 시작</button>
     </div>
+    
+    
     <script>
-
-    </script>
+    //확대 방지 테그
+	document.addEventListener('gesturestart', function (e) {
+    	e.preventDefault();
+	});
+	document.addEventListener('touchmove', function (e) {
+    	if (e.scale !== 1) {
+        	e.preventDefault();
+    	}
+	}, { passive: false });
+	</script>
 
 </body>
 </html>

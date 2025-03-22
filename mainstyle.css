@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'OneStoreMobileGothicPop';
+    src: url('assets/fonts/OneStoreMobileGothicPop.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #a8c7e6 url("assets/background.png") repeat;
+    background-size: 300px 300px;
+    font-family: 'OneStoreMobileGothicPop', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#intro {
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#intro h1 {
+    font-size: 42px;
+    color: #ff7070;
+    margin-bottom: 20px;
+}
+
+#start-btn {
+    font-size: 20px;
+    padding: 12px 30px;
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+#start-btn:hover {
+    transform: scale(1.05);
+    background-color: #ff6c91;
+}
+
+img {
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}

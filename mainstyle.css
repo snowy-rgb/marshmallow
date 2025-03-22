@@ -65,3 +65,12 @@ img {
     50% { transform: translateY(-15px); }
     100% { transform: translateY(0); }
 }
+
+/* 스크롤 방지 */
+html, body {
+    overflow: hidden;
+    height: 100%;
+    overscroll-behavior: none; /* 일부 브라우저 끌림 방지 */
+    touch-action: none; /* 터치 스크롤 차단 */
+}
+

@@ -51,12 +51,14 @@ body {
 img {  
     position: absolute;
     left: 50%;
-    top: 85%;
-    transform: translate(-60%, -60%) scale(6.5); /* 중앙보다 살짝 왼쪽, 확대 */
+    top: 50%;
+    transform: translate(-50%, -50%) scale(3.5); /* 중앙 정렬 + 확대 */
     z-index: 1;
-    pointer-events: none; /* 클릭 방지 */
-    opacity: 0.9;
+    pointer-events: none;
+    opacity: 0.95;
+    max-width: none;
 }
+
 
 @keyframes float {
     0% { transform: translateY(0); }

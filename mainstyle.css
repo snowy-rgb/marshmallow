@@ -74,3 +74,11 @@ html, body {
     touch-action: none; /* 터치 스크롤 차단 */
 }
 
+body {
+    -ms-touch-action: none;       /* IE */
+    -webkit-user-select: none;    /* iOS 사파리 */
+    -webkit-touch-callout: none;  /* 링크 꾹 눌렀을 때 메뉴 방지 */
+    user-select: none;            /* 선택 막기 */
+}
+
+

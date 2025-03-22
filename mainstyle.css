@@ -51,8 +51,8 @@ body {
 img {  
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-60%, -65%) scale(3.5); /* 중앙보다 살짝 왼쪽, 확대 */
+    top: 25%;
+    transform: translate(-60%, -65%) scale(4.5); /* 중앙보다 살짝 왼쪽, 확대 */
     z-index: 1;
     pointer-events: none; /* 클릭 방지 */
     opacity: 0.9;

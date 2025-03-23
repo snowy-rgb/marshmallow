@@ -25,6 +25,18 @@
         	e.preventDefault();
     	}
 	}, { passive: false });
+    
+    //이미지 고정 <1>
+    function updateVH() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    window.addEventListener('load', updateVH);
+    window.addEventListener('resize', updateVH);
+    window.addEventListener('orientationchange', () => {
+        setTimeout(updateVH, 100); // 회전 직후 약간의 시간 후 다시 계산
+    });
+
 	</script>
 
 </body>

@@ -50,7 +50,7 @@ body {
 /* 1 수정됨 */
 img {  
     position: absolute;
-    top: calc(var(--vh, 1vh) * 50);
+    top: calc(var(--vh, 1vh) * 50); /* 정확한 중앙 기준 */
     left: 50%;
     transform: translate(-50%, -35%) scale(5); /* 중앙 정렬 + 확대 */
     z-index: 1;
@@ -83,8 +83,10 @@ body {
 
 /* script 변수 적용(vh) */
 body {
-    height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  /* 나머지 스타일 유지 */
 }
+
 
 
 

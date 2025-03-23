@@ -51,8 +51,19 @@
             fixImagePosition();
         }, 200); // 리플로우 후 실행
     });
+	    
+    //vh 크기 검사 및 적용
+    function setRealVh() {
+	    const vh = window.innerHeight * 0.01;
+	    document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}
+	window.addEventListener('load', setRealVh);
+	window.addEventListener('resize', setRealVh);
+	window.addEventListener('orientationchange', () => {
+	    setTimeout(setRealVh, 200);
+	});
 
-	</script>
+    </script>
 
 </body>
 </html>

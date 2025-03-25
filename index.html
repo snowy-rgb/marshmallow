@@ -77,8 +77,22 @@
 	showVhSet(); // --vh 크기 확인
 
 	function showVhSet() {
-		console.log(window.innerHeight, document.documentElement.style.getPropertyValue('--vh'));
+		console.log("innerHeight:", window.innerHeight);
+ 		console.log("--vh:", document.documentElement.style.getPropertyValue('--vh'));
 	}
+
+	function waitForValidVh() {
+	    const interval = setInterval(() => {
+	        const vh = window.innerHeight * 0.01;
+	        if (vh > 0) { // 실수 값이 나오면 실행
+	            document.documentElement.style.setProperty('--vh', `${vh}px`);
+	            console.log(`--vh updated: ${vh}px`);
+	            clearInterval(interval); // 설정 완료 후 멈춤
+	        }
+	    }, 100); // 100ms 간격으로 실행
+	}
+	
+	waitForValidVh();
 	
     </script>
 

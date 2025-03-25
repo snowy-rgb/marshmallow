@@ -121,4 +121,41 @@ checkImageSizeDirect();
 	    setTimeout(updateImageStyle, 200);
 	});
 
-	
+
+//이미지 경로로 이미지 찾기
+function verifyImage(targetSrc) {
+    const img = document.querySelector('img'); // 확인하려는 이미지 선택
+    if (img) {
+        const currentSrc = img.src; // 현재 이미지 경로
+        if (currentSrc.includes(targetSrc)) {
+            console.log('확인 완료: 올바른 이미지입니다.');
+        } else {
+            console.log('경고: 다른 이미지입니다!');
+        }
+    } else {
+        console.log('이미지를 찾을 수 없습니다!');
+    }
+}
+
+// 예제 실행
+verifyImage('assets/image-name.png'); // 확인하려는 이미지 파일 경로
+
+//고유 alt나 id로 이미지 찾기
+function verifyImageByAlt(targetAlt) {
+    const img = document.querySelector('img');
+    if (img) {
+        const currentAlt = img.alt; // 이미지 alt 속성
+        if (currentAlt === targetAlt) {
+            console.log('확인 완료: 올바른 이미지입니다.');
+        } else {
+            console.log('경고: 다른 이미지입니다!');
+        }
+    }
+}
+
+verifyImageByAlt('example-alt-text'); // alt 텍스트
+
+//이미지 로드 여부
+img.addEventListener('load', () => {
+    console.log('이미지 로드 완료:', img.src);
+});

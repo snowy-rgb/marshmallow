@@ -73,10 +73,17 @@
 	    }, 200);
 	}
 	window.addEventListener('resize', setRealVhDebounced);
-	    
-	// --vh 크기 확인
-	console.log(window.innerHeight, document.documentElement.style.getPropertyValue('--vh'));
 
+	showVhSet(size); // --vh 크기 확인
+
+	function showVhSet(size) {
+		if (size == "size") {
+			console.log(window.innerHeight, document.documentElement.style.getPropertyValue('--vh'));
+		} else {
+			console.log("매개변수 오류");
+		}
+	}
+	
     </script>
 
 </body>

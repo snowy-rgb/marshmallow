@@ -65,6 +65,15 @@
 	  setTimeout(setRealVh, 200);
 	});
 
+	let timeout;
+	function setRealVhDebounced() {
+	    clearTimeout(timeout);
+	    timeout = setTimeout(() => {
+	        setRealVh();
+	    }, 200);
+	}
+	window.addEventListener('resize', setRealVhDebounced);
+
 
     </script>
 

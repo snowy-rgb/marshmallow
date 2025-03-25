@@ -138,7 +138,7 @@ function verifyImage(targetSrc) {
 }
 
 // 예제 실행
-verifyImage('assets/images/erpin.gif'); // 확인하려는 이미지 파일 경로
+verifyImage('assets/images/start/erpin.gif'); // 확인하려는 이미지 파일 경로
 
 //고유 alt나 id로 이미지 찾기
 function verifyImageByAlt(targetAlt) {
@@ -153,7 +153,7 @@ function verifyImageByAlt(targetAlt) {
     }
 }
 
-verifyImageByAlt('example-alt-text'); // alt 텍스트
+verifyImageByAlt('에르핀 냠냠<다시 로드해 주세요>'); // alt 텍스트
 
 
 //이미지 로드 여부

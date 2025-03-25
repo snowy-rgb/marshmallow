@@ -74,6 +74,10 @@ html, body {
     touch-action: none; /* 터치 스크롤 차단 */
 }
 
+html {
+    width: 100vw; /* 정확한 너비 적용 */
+}
+
 body {
     -ms-touch-action: none;       /* IE */
     -webkit-user-select: none;    /* iOS 사파리 */

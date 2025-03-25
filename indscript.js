@@ -138,7 +138,7 @@ function verifyImage(targetSrc) {
 }
 
 // 예제 실행
-verifyImage('assets/image-name.png'); // 확인하려는 이미지 파일 경로
+verifyImage('assets/images/erpin.gif'); // 확인하려는 이미지 파일 경로
 
 //고유 alt나 id로 이미지 찾기
 function verifyImageByAlt(targetAlt) {
@@ -155,7 +155,9 @@ function verifyImageByAlt(targetAlt) {
 
 verifyImageByAlt('example-alt-text'); // alt 텍스트
 
+
 //이미지 로드 여부
+const img = document.querySelector('img');
 img.addEventListener('load', () => {
     console.log('이미지 로드 완료:', img.src);
 });

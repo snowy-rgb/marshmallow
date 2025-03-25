@@ -93,6 +93,21 @@
 	}
 	
 	waitForValidVh();
+
+	// 이미지 vh 업로드
+	function updateImageStyle() {
+	    const img = document.querySelector('img');
+	    if (img) {
+	        const vh = window.innerHeight * 0.01; // 최신 높이 계산
+	        img.style.top = `${vh * 50}px`; // 동적으로 top 설정
+	    }
+	}
+	
+	updateImageStyle();
+	window.addEventListener('resize', updateImageStyle);
+	window.addEventListener('orientationchange', () => {
+	    setTimeout(updateImageStyle, 200);
+	});
 	
     </script>
 

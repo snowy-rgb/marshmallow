@@ -113,10 +113,10 @@
 	function checkImageRatio() {
 	    const erpin = document.querySelector('img'); // 이미지 요소 선택
 	    if (erpin) {
-	        const naturalWidth = img.naturalWidth; // 이미지 원본 가로 크기
-	        const naturalHeight = img.naturalHeight; // 이미지 원본 세로 크기
-	        const currentWidth = img.offsetWidth; // 현재 화면상 가로 크기
-	        const currentHeight = img.offsetHeight; // 현재 화면상 세로 크기
+	        const naturalWidth = erpin.naturalWidth; // 이미지 원본 가로 크기
+	        const naturalHeight = erpin.naturalHeight; // 이미지 원본 세로 크기
+	        const currentWidth = erpin.offsetWidth; // 현재 화면상 가로 크기
+	        const currentHeight = erpin.offsetHeight; // 현재 화면상 세로 크기
 	
 	        console.log('원본 비율:', naturalWidth / naturalHeight);
 	        console.log('현재 비율:', currentWidth / currentHeight);

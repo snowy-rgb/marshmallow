@@ -87,7 +87,7 @@ body {
 
 /* script 변수 적용(vh) */
 img {
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 50);
   /* 나머지 스타일 유지 */
 }
 

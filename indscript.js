@@ -161,3 +161,10 @@ const img = document.querySelector('img');
 img.addEventListener('load', () => {
     console.log('이미지 로드 완료:', img.src);
 });
+
+//모바일 로그 메세지 태스트
+function logMessage(message) {
+        const consoleDiv = document.getElementById('console');
+        consoleDiv.innerHTML += message + '<br>'; // 내용을 추가하며 새 줄로 표시
+}
+

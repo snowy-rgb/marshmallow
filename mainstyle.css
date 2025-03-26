@@ -52,12 +52,12 @@ img {
     position: absolute;
     top: 50%; /* 정확한 중앙 기준 */
     left: 50%;
-    transform: translate(-50%, -50%); scale(5);/* 중앙 정렬 + 확대 */
+    transform: translate(-50%, -50%); scale(8);/* 중앙 정렬 + 확대 */
     z-index: 1;
     pointer-events: none;
     opacity: 0.95;
     max-width: none;
-    height: calc(var(--vh) * 50); /* --vh를 사용한 동적 높이 */
+    height: 80vh; /* --vh를 사용한 동적 높이 */
     width: auto; /* 비율 유지 */
 }
 

@@ -48,17 +48,17 @@ body {
 }
 
 /* 1 수정됨 */
-img {  
+img {
     position: absolute;
-    top: 50%; /* 정확한 중앙 기준 */
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); scale(8);/* 중앙 정렬 + 확대 */
+    transform: translate(-50%, -50%) scale(8); /* scale은 transform 안에 있어야 해! */
     z-index: 1;
     pointer-events: none;
     opacity: 0.95;
     max-width: none;
-    height: 80vh; /* --vh를 사용한 동적 높이 */
-    width: auto; /* 비율 유지 */
+    width: 80vh;  /* ← 이거 추가! */
+    height: auto; /* ← 비율 유지되게 설정 */
 }
 
 

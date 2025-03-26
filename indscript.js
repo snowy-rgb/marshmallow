@@ -11,6 +11,21 @@ function checkImageSize() {
     }
 }
 
+//함수만   *완료*
+function onCheckImageSize() {
+    const img = document.querySelector('img'); // 이미지 선택
+    if (img) {
+        img.addEventListener('load', () => { // 이미지 로드 완료 후 실행
+            const width = img.offsetWidth; // 렌더링된 이미지 가로 크기
+            const height = img.offsetHeight; // 렌더링된 이미지 세로 크기
+            console.log(`${width}px x ${height}px`);
+        });
+    } else {
+        console.log('이미지 요소를 찾을 수 없습니다!');
+    }
+}
+//
+
 // 초기 실행
 checkImageSize();
 
@@ -25,6 +40,19 @@ function checkImageSizeDirect() {
         console.log('이미지가 아직 로드되지 않았습니다.');
     }
 }
+
+//함수만  *완료*
+function onCheckImageNonSizeDirect() {
+    const img = document.querySelector('img');
+    if (img && img.complete) { // 로드 상태 체크
+        const width = img.offsetWidth;
+        const height = img.offsetHeight;
+        console.log('로드됨');
+    } else {
+        console.log('로드되지 않음');
+    }
+}
+//
 
 checkImageSizeDirect();
 
@@ -93,6 +121,14 @@ checkImageSizeDirect();
  		console.log("--vh:", document.documentElement.style.getPropertyValue('--vh'));
 	}
 
+//함수만   *완료*
+function onShowVhInnerSet() {
+	console.log("innerHeight:", window.innerHeight);
+}
+function onShowVhInnerImageSet() {
+	console.log("--vh:", document.documentElement.style.getPropertyValue('--vh'));
+}
+
 	function waitForValidVh() {
 	    const interval = setInterval(() => {
 	        const vh = window.innerHeight * 0.01;
@@ -106,7 +142,7 @@ checkImageSizeDirect();
 	
 	waitForValidVh();
 
-	// 이미지 vh 업로드
+	// 이미지 vh 업데이트
 	function updateImageStyle() {
 	    const img = document.querySelector('img');
 	    if (img) {
@@ -137,6 +173,22 @@ function verifyImage(targetSrc) {
     }
 }
 
+//함수만
+function onVerifyImageIsCorrect(targetSrc) {
+    const img = document.querySelector('img'); // 확인하려는 이미지 선택
+    if (img) {
+        const currentSrc = img.src; // 현재 이미지 경로
+        if (currentSrc.includes(targetSrc)) {
+            console.log('확인 완료: 올바른 이미지입니다.');
+        } else {
+            console.log('경고: 다른 이미지입니다!');
+        }
+    } else {
+        console.log('이미지를 찾을 수 없습니다!');
+    }
+}
+//
+
 // 예제 실행
 verifyImage('assets/images/start/erpin.gif'); // 확인하려는 이미지 파일 경로
 
@@ -153,6 +205,20 @@ function verifyImageByAlt(targetAlt) {
     }
 }
 
+//함수만
+function onVerifyImageByAltIsCorrect(targetAlt) {
+    const img = document.querySelector('img');
+    if (img) {
+        const currentAlt = img.alt; // 이미지 alt 속성
+        if (currentAlt === targetAlt) {
+            console.log('확인 완료: 올바른 이미지입니다.');
+        } else {
+            console.log('경고: 다른 이미지입니다!');
+        }
+    }
+}
+//
+
 verifyImageByAlt('에르핀 냠냠<다시 로드해 주세요>'); // alt 텍스트
 
 
@@ -166,5 +232,34 @@ img.addEventListener('load', () => {
 function logMessage(message) {
         const consoleDiv = document.getElementById('console');
         consoleDiv.innerHTML += message + '<br>'; // 내용을 추가하며 새 줄로 표시
+}
+
+function allInfo() {
+	//
+	const loadImage = onCheckImageNonSizeDirect();
+	const checkImgSize = checkImageSize();
+	const backSize = onShowVhInnerSet();
+	const imgSize = onShowVhInnerImageSet();
+	const checkImgDir = onVerifyImageIsCorrect('assets/images/start/erpin.gif');
+	const checkImgByAlt = onVerifyImageByAltIsCorrect('에르핀 냠냠<다시 로드해 주세요>');
+
+	//
+	const err = 0
+	const sons = 0
+	const IsErr = ''
+	const nnLoad = ''
+
+	//
+	const lost = if (loadImage != a) {}
+	
+	//
+	console.log(`이미지 로드          : ${loadImage}`);
+	console.log(`이미지 사이즈        : ${checkImgSize}`)
+	console.log(`배경                : ${backSize}`)
+	console.log(`이미지 사이즈 세팅   : ${imgSize}`)
+	console.log(`이미지 경로          : ${checkImgDir}, assets/images/start/erpin.gif`)
+	console.log(`이미지 alt          : ${checkImgByAlt}, 에르핀 냠냠<다시 로드해 주세요>`)
+	console.log(``)
+	
 }
 

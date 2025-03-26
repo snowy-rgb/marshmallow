@@ -313,7 +313,15 @@ function logImageRatio(imagePath) {
 // 사용 예시
 logImageRatio('assets/images/start/erpin.gif');
 
-// 크기
+//크기
+function zoomToFace() {
+    const img = document.querySelector('img');
+    img.style.left = '50%';
+    img.style.top = '50%';
+    img.style.transform = 'translate(-50%, -60%) scale(5)'; // 💥 핵심!
+}
+
+// 크기 적용
 window.addEventListener("load", zoomToFace);
 window.addEventListener("orientationchange", () => {
     setTimeout(zoomToFace, 300);

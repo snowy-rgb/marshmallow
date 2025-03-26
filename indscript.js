@@ -250,7 +250,7 @@ function allInfo() {
 	const nnLoad = ''
 
 	//
-	const lost = if (loadImage != a) {}
+	const lost = ''
 	
 	//
 	console.log(`이미지 로드          : ${loadImage}`);

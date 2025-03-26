@@ -52,14 +52,15 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(8); /* scale은 transform 안에 있어야 해! */
+    width: 60vw;           /* 화면 너비의 60% */
+    max-width: 1000px;     /* 너무 커지지 않도록 제한 */
+    height: auto;
+    transform: translate(-50%, -50%);
     z-index: 1;
     pointer-events: none;
     opacity: 0.95;
-    max-width: none;
-    width: 80vh;  /* ← 이거 추가! */
-    height: auto; /* ← 비율 유지되게 설정 */
 }
+
 
 
 @keyframes float {

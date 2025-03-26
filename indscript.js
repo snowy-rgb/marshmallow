@@ -236,8 +236,8 @@ function logMessage(message) {
 
 function allInfo() {
 	//
-	const loadImage = onCheckImageNonSizeDirect();
-	const checkImgSize = checkImageSize();
+	const loadImage = checkImageSizeDirect();
+	const checkImgSize = onCheckImageSize();
 	const backSize = onShowVhInnerSet();
 	const imgSize = onShowVhInnerImageSet();
 	const checkImgDir = onVerifyImageIsCorrect('assets/images/start/erpin.gif');

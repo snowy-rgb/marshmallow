@@ -52,7 +52,7 @@ img {
     position: absolute;
     top: 50%; /* 정확한 중앙 기준 */
     left: 50%;
-    transform: translate(-50%, -15%); /* 중앙 정렬 + 확대 */
+    transform: translate(-50%, -50%); scale(5);/* 중앙 정렬 + 확대 */
     z-index: 1;
     pointer-events: none;
     opacity: 0.95;

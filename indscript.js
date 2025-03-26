@@ -264,24 +264,27 @@ function allInfo() {
 }
 
 //
-const imageUpload = document.getElementById('imageUpload');
+function showRelDir() {
+	const imageUpload = document.getElementById('imageUpload');
 
-imageUpload.addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        const img = new Image();
+	imageUpload.addEventListener('change', function(event) {
+        	const file = event.target.files[0];
+       		const img = new Image();
 
-        img.onload = function() {
-       		const width = img.width;
-       		const height = img.height;
-        	const ratio = width / height;
+        	img.onload = function() {
+       			const width = img.width;
+       			const height = img.height;
+        		const ratio = width / height;
 	
-                console.log(`이미지 비율: ${ratio}`);
-                console.log(`너비: ${width}, 높이: ${height}`);
-        };
+               		console.log(`이미지 비율: ${ratio}`);
+                	console.log(`너비: ${width}, 높이: ${height}`);
+        	};
 
-	if (file) {
-	         img.src = URL.createObjectURL(file);
-	 }
-});
+		if (file) {
+	         	img.src = URL.createObjectURL(file);
+	 	}
+    	});
+
+}
 
 

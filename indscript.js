@@ -79,18 +79,12 @@ checkImageSizeDirect();
     
     //이미지 강제 제정렬<2>
     function fixImagePosition() {
-        const erpin = document.querySelector("img");
-        erpin.style.left = "50%";
-        erpin.style.top = "50%";
-        erpin.style.transform = "translate(-50%, -40%) scale(3.5)";
+    	const erpin = document.querySelector("img");
+    	erpin.style.left = "50%";
+    	erpin.style.top = "50%";
+    	erpin.style.transform = "translate(-50%, -50%) scale(3.5)";
     }
 
-    window.addEventListener("orientationchange", () => {
-        setTimeout(() => {
-            updateVH();
-            fixImagePosition();
-        }, 200); // 리플로우 후 실행
-    });
 	    
     //vh 크기 검사 및 적용
 

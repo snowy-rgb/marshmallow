@@ -287,4 +287,27 @@ function showRelDir() {
 
 }
 
+//
+function logImageRatio(imagePath) {
+    const img = new Image();
+
+    img.onload = function () {
+        const width = img.width;
+        const height = img.height;
+        const ratio = width / height;
+
+        console.log(`이미지 비율: ${ratio}`);
+        console.log(`너비: ${width}, 높이: ${height}`);
+    };
+
+    img.onerror = function () {
+        console.log(`이미지를 불러오는 데 실패했습니다. 경로를 확인하세요: ${imagePath}`);
+    };
+
+    img.src = imagePath;
+}
+
+// 사용 예시
+logImageRatio('assets/images/start/erpin.gif');
+
 

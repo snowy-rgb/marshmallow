@@ -157,6 +157,15 @@ function onShowVhInnerImageSet() {
 	    setTimeout(updateImageStyle, 200);
 	});
 
+//
+function setVh() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+window.addEventListener('resize', setVh);
+setVh();
+
+
 
 //이미지 경로로 이미지 찾기
 function verifyImage(targetSrc) {

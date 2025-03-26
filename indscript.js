@@ -331,3 +331,21 @@ window.addEventListener("resize", () => {
 });
 
 
+//비율
+function focusBetweenEyesAndMouth() {
+    const img = document.querySelector("img");
+    img.style.left = "50%";
+    img.style.top = "50%";
+    img.style.transform = "translate(-50%, -68%) scale(5.2)";
+}
+
+
+window.addEventListener("load", focusBetweenEyesAndMouth);
+window.addEventListener("resize", () => {
+    setTimeout(focusBetweenEyesAndMouth, 100);
+});
+window.addEventListener("orientationchange", () => {
+    setTimeout(focusBetweenEyesAndMouth, 300);
+});
+
+
